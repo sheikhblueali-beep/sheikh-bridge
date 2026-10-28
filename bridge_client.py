@@ -17,6 +17,8 @@ class GitBridge:
             job_id = str(uuid.uuid4())
             job_file = self.queue / f"{job_id}.json"
             
+            await asyncio.to_thread(self._git, "pull", "--rebase")
+            
             job = {"id": job_id, "method": method, "params": params}
             job_file.write_text(json.dumps(job))
             
@@ -27,7 +29,7 @@ class GitBridge:
             result_file = self.results / f"{job_id}.json"
             start = time.time()
             while time.time() - start < self.timeout:
-                await asyncio.sleep(1)
+                await asyncio.sleep(0.5)
                 await asyncio.to_thread(self._git, "pull", "--rebase")
                 if result_file.exists():
                     try:
