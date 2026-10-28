@@ -1,0 +1,39 @@
+name: TG Bridge Runner
+
+on:
+  schedule:
+    - cron: '*/5 * * * *'
+  push:
+    paths:
+      - 'queue/**'
+      - '.trigger'
+  workflow_dispatch:
+
+concurrency:
+  group: tg-runner
+  cancel-in-progress: false
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 350
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+          persist-credentials: true
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install deps
+        run: pip install requests
+
+      - name: Run bridge
+        env:
+          TG_TOKEN: ${{ secrets.TG_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python .github/runner.py
