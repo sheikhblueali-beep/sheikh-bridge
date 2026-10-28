@@ -15,13 +15,13 @@ def git(*args):
     return subprocess.run(["git", *args], capture_output=True, text=True, cwd=ROOT)
 
 def git_pull():
-    git("pull", "--rebase", "--autostash", "origin", "main")
+    git("fetch", "origin", "main")
+    git("reset", "--hard", "origin/main")
 
 def git_push(msg):
     git("add", "-A")
     git("commit", "-m", msg)
-    git("push", "origin", "main")
-
+    git("push", "origin", "HEAD:main")
 def load_state():
     if STATE.exists():
         try: return json.loads(STATE.read_text())
