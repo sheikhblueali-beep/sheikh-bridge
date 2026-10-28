@@ -41,4 +41,4 @@ jobs:
         env:
           TG_TOKEN: ${{ secrets.TG_TOKEN }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: python .github/runner.py
+        run: python -u .github/runner.py
