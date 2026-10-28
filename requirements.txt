@@ -1,0 +1,15 @@
+aiogram>=3.10.0
+pyrogram==2.0.106
+tgcrypto
+Telethon>=1.40.0
+py-tgcalls>=3.0.0
+requests
+aiohttp
+flask
+gunicorn
+jdatetime
+qrcode[pil]
+yt-dlp
+imageio-ffmpeg
+python-dotenv
+aiomysql
