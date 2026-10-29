@@ -1,0 +1,1 @@
+{"update_id": 933712292, "message": {"message_id": 3182, "from": {"id": 1113477580, "is_bot": false, "first_name": "T", "last_name": "Farahmand", "language_code": "en"}, "chat": {"id": 1113477580, "first_name": "T", "last_name": "Farahmand", "type": "private"}, "date": 1793251429, "text": "/start", "entities": [{"offset": 0, "length": 6, "type": "bot_command"}]}}
