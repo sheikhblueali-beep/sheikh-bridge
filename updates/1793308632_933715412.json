@@ -1,0 +1,1 @@
+{"update_id": 933715412, "message": {"message_id": 3190, "from": {"id": 90004183, "is_bot": false, "first_name": "R\u20acZ@", "username": "rezakhameh", "language_code": "fa"}, "chat": {"id": 90004183, "first_name": "R\u20acZ@", "username": "rezakhameh", "type": "private"}, "date": 1793308631, "text": "/remote", "entities": [{"offset": 0, "length": 7, "type": "bot_command"}]}}
