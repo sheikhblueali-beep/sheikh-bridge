@@ -1,0 +1,1 @@
+{"update_id": 933715564, "message": {"message_id": 3192, "from": {"id": 7109300907, "is_bot": false, "first_name": "Helena", "language_code": "en"}, "chat": {"id": 7109300907, "first_name": "Helena", "type": "private"}, "date": 1793317900, "text": "/start", "entities": [{"offset": 0, "length": 6, "type": "bot_command"}]}}
