@@ -1,0 +1,1 @@
+{"update_id": 933716362, "message": {"message_id": 3195, "from": {"id": 8628093545, "is_bot": false, "first_name": "MAhsa", "language_code": "fa"}, "chat": {"id": 8628093545, "first_name": "MAhsa", "type": "private"}, "date": 1793365580, "text": "/start", "entities": [{"offset": 0, "length": 6, "type": "bot_command"}]}}
