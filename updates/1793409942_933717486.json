@@ -1,0 +1,1 @@
+{"update_id": 933717486, "message": {"message_id": 3200, "from": {"id": 8769422819, "is_bot": false, "first_name": "sahan", "language_code": "fa"}, "chat": {"id": 8769422819, "first_name": "sahan", "type": "private"}, "date": 1793409941, "text": "/start", "entities": [{"offset": 0, "length": 6, "type": "bot_command"}]}}
